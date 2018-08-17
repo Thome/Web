@@ -1,0 +1,46 @@
+create table alunos (
+	matricula varchar(12) not null default '',
+	nomealuno varchar(50) not null default '',
+	cursoaluno varchar(3) not null default ''
+);
+
+insert into alunos values ('03111195','Alan Yves Corbiniano Martins','001');
+INSERT INTO turmas VALUES ('01112051','Alexandre Simoes de Melo','001');
+INSERT INTO turmas VALUES ('03110061','Alexsandro Santos Silva','002');
+INSERT INTO turmas VALUES ('00111281','Aline Vasconcelos Santos','002');
+INSERT INTO turmas VALUES ('02111791','Amanda Silva Santana','003');
+INSERT INTO turmas VALUES ('02110940','Antonio Carlos A. de Oliveira','003');
+insert into alunos values ('201600017169','Thome Pereira Alves Neto','001');
+
+create table cursos (
+	codcurso varchar(3) not null default '',
+	nomecurso varchar(30) not null default ''
+);
+
+insert into cursos values ('001','Ciência da Computação');
+insert into cursos values ('002','Engenharia da Computação');
+insert into cursos values ('003','Sistemas de Informações');
+
+create table disciplinas (
+	coddisc varchar(6) not null default '',
+	nomedisc varchar(30) not null default '',
+	cargadisc varchar(1) not null default ''
+);
+
+insert into disciplinas values ('103204','Programação I','2');
+insert into disciplinas values ('103205','Programação II','4');
+insert into disciplinas values ('Top. Esp. em Programação','6');
+
+create table turmas (
+	coddisc varchar(6) not null default '',
+	codturma varchar(3) not null default '',
+	horario1 varchar(8),
+	horario2 varchar(8),
+	horario3 varchar(8),
+);
+
+insert into turmas values ('103204','T01','2T12',null,null);
+insert into turmas values ('103204','T02','2T34',null,null);
+insert into turmas values ('103205','T01','3T56','5T56',null);
+insert into turmas values ('103205','T02','4N1234',null,null);
+insert into turmas values ('103213','T01','2M56','4M56','6M56');
